@@ -1,10 +1,10 @@
 #!/bin/bash
 cd /app/target
-export DB_DIALECT=HSQLDB
-export DB_URL=jdbc:hsqldb:file:lavagna
-export DB_USER=sa
-export DB_PASS=""
-export SPRING_PROFILE=dev
+# export DB_DIALECT=HSQLDB
+# export DB_URL=jdbc:hsqldb:file:lavagna
+# export DB_USER=sa
+# export DB_PASS=""
+# export SPRING_PROFILE=dev
 
 unzip lavagna-1.1.3-SNAPSHOT-distribution.zip
 
