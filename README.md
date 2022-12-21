@@ -1,6 +1,6 @@
 # Lavagna
 
-This project is based on Lavagna(https://github.com/digitalfondue/lavagna), an open source project management tool.
+This project is based on [https://github.com/digitalfondue/lavagna]Lavagna, an open source project management tool.
 
 ## What I did
 
