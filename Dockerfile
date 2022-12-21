@@ -1,4 +1,4 @@
-FROM maven:3.8.6-openjdk-8
+FROM maven:3.8.6-openjdk-8 as builder
 
 
 
@@ -10,9 +10,18 @@ WORKDIR /app
 # build and verify
 RUN mvn verify
 
+COPY entrypoint.sh .
+
+RUN ["chmod", "+x", "entrypoint.sh"]
+
+
 # # set the entrypoint script
-COPY entrypoint.sh /entrypoint.sh
+FROM openjdk:8-jre-alpine 
 
-RUN ["chmod", "+x", "/entrypoint.sh"]
+RUN mkdir -p /app/target
 
-ENTRYPOINT ["/entrypoint.sh"]
+COPY --from=builder  /app/target /app/target
+
+COPY --from=builder app/entrypoint.sh /
+
+ENTRYPOINT ["./entrypoint.sh"]

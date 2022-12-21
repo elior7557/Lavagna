@@ -1,0 +1,26 @@
+FROM maven:3.8.6-openjdk-8 as builder
+
+
+
+# copy source files
+COPY src /app/src
+COPY pom.xml LICENSE-GPLv3.txt /app/
+
+WORKDIR /app
+# build and verify
+RUN mvn clean stampo:build
+
+# COPY entrypoint.sh .
+
+
+
+
+# # set the entrypoint script
+FROM nginx
+
+# RUN mkdir -p /app/target
+
+COPY --from=builder  /app/target/lavagna/help /usr/share/nginx/html/docs
+
+
+CMD ["nginx", "-g", "daemon off;"]

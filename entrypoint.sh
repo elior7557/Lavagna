@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 cd /app/target
 # export DB_DIALECT=HSQLDB
 # export DB_URL=jdbc:hsqldb:file:lavagna
