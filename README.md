@@ -15,11 +15,23 @@ Additionally, I set up a documentation server running on port 8081, and the ngin
 ## How to run
 
 To run this project, you will need to have Docker and Docker Compose installed on your machine.
+
+Clone this repository to your local machine
 ```
-    Clone this repository to your local machine
-    Navigate to the root directory of the repository
-    Run docker-compose up to start the Lavagna application
+git clone https://github.com/elior7557/Lavagna.git
 ```
+Navigate to the root directory of the repository
+```
+cd Lavagna
+
+```
+
+Run docker-compose up to start the Lavagna application
+```
+docker compose up -d
+```
+
+    
 
 The application should now be running on your local machine.<br> You can access it by visiting http://localhost in your web browser. <br>
 The documantion server is avalable on http://localhost:8081
