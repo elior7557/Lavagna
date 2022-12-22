@@ -31,6 +31,6 @@ docker compose up -d
 ```
 
     
-
+## Access The Aplication
 The application should now be running on your local machine.<br> You can access it by visiting http://localhost in your web browser. <br>
 The documantion server is avalable on http://localhost:8081
