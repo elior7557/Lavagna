@@ -23,7 +23,6 @@ git clone https://github.com/elior7557/Lavagna.git
 Navigate to the root directory of the repository
 ```
 cd Lavagna
-
 ```
 
 Run docker-compose up to start the Lavagna application
